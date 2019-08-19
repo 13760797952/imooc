@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button,} from 'antd-mobile'
-import 'antd-mobile/dist/antd-mobile.css'
+import {Button,WingBlank} from 'antd-mobile'
+// import 'antd-mobile/dist/antd-mobile.css'
 
 class App extends React.Component{
   render(){
@@ -38,7 +38,9 @@ class Once extends React.Component{
       <div>
         <h2>一营营长：{this.props.boss}</h2>
         {/* <button onClick={()=>this.addSolder()}>新兵入伍</button> */}
-        <Button type="primary" onClick={this.addSolder}>新兵入伍</Button>
+        <WingBlank>
+          <Button type="primary" onClick={this.addSolder}>新兵入伍</Button>
+        </WingBlank>
         <ul>
           {this.state.solders.map(v=>{
             return <li key={v}>{v}</li>
